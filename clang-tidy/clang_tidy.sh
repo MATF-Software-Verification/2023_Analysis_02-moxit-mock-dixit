@@ -21,7 +21,7 @@ mkdir $backend_build_dir
 cd $backend_build_dir
 
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ../$backend_src
-make
+make > /dev/null
 
 run-clang-tidy -p . -header-filter=".*"  2>&1 | tee "../../$output_file_backend"
 
@@ -31,7 +31,7 @@ mkdir $frontend_build_dir
 cd $frontend_build_dir 
 
 cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ../"$frontend_src"
-make
+make > /dev/null
 
 cd .. 
 
