@@ -1,0 +1,206 @@
+Enabled checks:
+    clang-analyzer-apiModeling.StdCLibraryFunctions
+    clang-analyzer-apiModeling.TrustNonnull
+    clang-analyzer-apiModeling.google.GTest
+    clang-analyzer-apiModeling.llvm.CastValue
+    clang-analyzer-apiModeling.llvm.ReturnValue
+    clang-analyzer-core.CallAndMessage
+    clang-analyzer-core.CallAndMessageModeling
+    clang-analyzer-core.DivideZero
+    clang-analyzer-core.DynamicTypePropagation
+    clang-analyzer-core.NonNullParamChecker
+    clang-analyzer-core.NonnilStringConstants
+    clang-analyzer-core.NullDereference
+    clang-analyzer-core.StackAddrEscapeBase
+    clang-analyzer-core.StackAddressEscape
+    clang-analyzer-core.UndefinedBinaryOperatorResult
+    clang-analyzer-core.VLASize
+    clang-analyzer-core.builtin.BuiltinFunctions
+    clang-analyzer-core.builtin.NoReturnFunctions
+    clang-analyzer-core.uninitialized.ArraySubscript
+    clang-analyzer-core.uninitialized.Assign
+    clang-analyzer-core.uninitialized.Branch
+    clang-analyzer-core.uninitialized.CapturedBlockVariable
+    clang-analyzer-core.uninitialized.UndefReturn
+    clang-analyzer-cplusplus.InnerPointer
+    clang-analyzer-cplusplus.Move
+    clang-analyzer-cplusplus.NewDelete
+    clang-analyzer-cplusplus.NewDeleteLeaks
+    clang-analyzer-cplusplus.PlacementNew
+    clang-analyzer-cplusplus.PureVirtualCall
+    clang-analyzer-cplusplus.SelfAssignment
+    clang-analyzer-cplusplus.SmartPtrModeling
+    clang-analyzer-cplusplus.StringChecker
+    clang-analyzer-cplusplus.VirtualCallModeling
+    clang-analyzer-deadcode.DeadStores
+    clang-analyzer-fuchsia.HandleChecker
+    clang-analyzer-nullability.NullPassedToNonnull
+    clang-analyzer-nullability.NullReturnedFromNonnull
+    clang-analyzer-nullability.NullabilityBase
+    clang-analyzer-nullability.NullableDereferenced
+    clang-analyzer-nullability.NullablePassedToNonnull
+    clang-analyzer-nullability.NullableReturnedFromNonnull
+    clang-analyzer-optin.cplusplus.UninitializedObject
+    clang-analyzer-optin.cplusplus.VirtualCall
+    clang-analyzer-optin.mpi.MPI-Checker
+    clang-analyzer-optin.osx.OSObjectCStyleCast
+    clang-analyzer-optin.osx.cocoa.localizability.EmptyLocalizationContextChecker
+    clang-analyzer-optin.osx.cocoa.localizability.NonLocalizedStringChecker
+    clang-analyzer-optin.performance.GCDAntipattern
+    clang-analyzer-optin.performance.Padding
+    clang-analyzer-optin.portability.UnixAPI
+    clang-analyzer-osx.API
+    clang-analyzer-osx.MIG
+    clang-analyzer-osx.NSOrCFErrorDerefChecker
+    clang-analyzer-osx.NumberObjectConversion
+    clang-analyzer-osx.OSObjectRetainCount
+    clang-analyzer-osx.ObjCProperty
+    clang-analyzer-osx.SecKeychainAPI
+    clang-analyzer-osx.cocoa.AtSync
+    clang-analyzer-osx.cocoa.AutoreleaseWrite
+    clang-analyzer-osx.cocoa.ClassRelease
+    clang-analyzer-osx.cocoa.Dealloc
+    clang-analyzer-osx.cocoa.IncompatibleMethodTypes
+    clang-analyzer-osx.cocoa.Loops
+    clang-analyzer-osx.cocoa.MissingSuperCall
+    clang-analyzer-osx.cocoa.NSAutoreleasePool
+    clang-analyzer-osx.cocoa.NSError
+    clang-analyzer-osx.cocoa.NilArg
+    clang-analyzer-osx.cocoa.NonNilReturnValue
+    clang-analyzer-osx.cocoa.ObjCGenerics
+    clang-analyzer-osx.cocoa.RetainCount
+    clang-analyzer-osx.cocoa.RetainCountBase
+    clang-analyzer-osx.cocoa.RunLoopAutoreleaseLeak
+    clang-analyzer-osx.cocoa.SelfInit
+    clang-analyzer-osx.cocoa.SuperDealloc
+    clang-analyzer-osx.cocoa.UnusedIvars
+    clang-analyzer-osx.cocoa.VariadicMethodTypes
+    clang-analyzer-osx.coreFoundation.CFError
+    clang-analyzer-osx.coreFoundation.CFNumber
+    clang-analyzer-osx.coreFoundation.CFRetainRelease
+    clang-analyzer-osx.coreFoundation.containers.OutOfBounds
+    clang-analyzer-osx.coreFoundation.containers.PointerSizedValues
+    clang-analyzer-security.FloatLoopCounter
+    clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling
+    clang-analyzer-security.insecureAPI.SecuritySyntaxChecker
+    clang-analyzer-security.insecureAPI.UncheckedReturn
+    clang-analyzer-security.insecureAPI.bcmp
+    clang-analyzer-security.insecureAPI.bcopy
+    clang-analyzer-security.insecureAPI.bzero
+    clang-analyzer-security.insecureAPI.decodeValueOfObjCType
+    clang-analyzer-security.insecureAPI.getpw
+    clang-analyzer-security.insecureAPI.gets
+    clang-analyzer-security.insecureAPI.mkstemp
+    clang-analyzer-security.insecureAPI.mktemp
+    clang-analyzer-security.insecureAPI.rand
+    clang-analyzer-security.insecureAPI.strcpy
+    clang-analyzer-security.insecureAPI.vfork
+    clang-analyzer-unix.API
+    clang-analyzer-unix.DynamicMemoryModeling
+    clang-analyzer-unix.Malloc
+    clang-analyzer-unix.MallocSizeof
+    clang-analyzer-unix.MismatchedDeallocator
+    clang-analyzer-unix.Vfork
+    clang-analyzer-unix.cstring.BadSizeArg
+    clang-analyzer-unix.cstring.CStringModeling
+    clang-analyzer-unix.cstring.NullArg
+    clang-analyzer-valist.CopyToSelf
+    clang-analyzer-valist.Uninitialized
+    clang-analyzer-valist.Unterminated
+    clang-analyzer-valist.ValistBase
+    clang-analyzer-webkit.NoUncountedMemberChecker
+    clang-analyzer-webkit.RefCntblBaseVirtualDtor
+    clang-analyzer-webkit.UncountedLambdaCapturesChecker
+
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/chat/ChatBackend.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/game/player.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/tests/test_game_player.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/tests/test_chat.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/handler.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/response.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp
+[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:151:12: [0m[0;1;35mwarning: [0m[1mPotential leak of memory pointed to by 'event' [clang-analyzer-cplusplus.NewDeleteLeaks][0m
+    return new_socket;
+[0;1;32m           ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:84:8: [0m[0;1;30mnote: [0mAssuming the condition is false[0m
+    if(listen(m_socket, k_backlogSize) < 0) {
+[0;1;32m       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:84:5: [0m[0;1;30mnote: [0mTaking false branch[0m
+    if(listen(m_socket, k_backlogSize) < 0) {
+[0;1;32m    ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:102:5: [0m[0;1;30mnote: [0mLoop condition is true.  Entering loop body[0m
+    for(int i = 0 ; i < k_threadPoolSize ; i++) {
+[0;1;32m    ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:102:5: [0m[0;1;30mnote: [0mLoop condition is true.  Entering loop body[0m
+[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:102:5: [0m[0;1;30mnote: [0mLoop condition is true.  Entering loop body[0m
+[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:102:5: [0m[0;1;30mnote: [0mLoop condition is false. Execution continues on line 106[0m
+[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:106:5: [0m[0;1;30mnote: [0mCalling 'MoxitServer::startWorkerThread'[0m
+    startWorkerThread();
+[0;1;32m    ^~~~~~~~~~~~~~~~~~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:156:5: [0m[0;1;30mnote: [0mLoop condition is true.  Entering loop body[0m
+    while(m_running) {
+[0;1;32m    ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:158:12: [0m[0;1;30mnote: [0mAssuming 'numOfFds' is >= 0[0m
+        if(numOfFds < 0) {
+[0;1;32m           ^~~~~~~~~~~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:158:9: [0m[0;1;30mnote: [0mTaking false branch[0m
+        if(numOfFds < 0) {
+[0;1;32m        ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:162:25: [0m[0;1;30mnote: [0mAssuming 'i' is < 'numOfFds'[0m
+        for(int i = 0 ; i < numOfFds ; i++) {
+[0;1;32m                        ^~~~~~~~~~~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:162:9: [0m[0;1;30mnote: [0mLoop condition is true.  Entering loop body[0m
+        for(int i = 0 ; i < numOfFds ; i++) {
+[0;1;32m        ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:163:16: [0m[0;1;30mnote: [0mAssuming field 'fd' is equal to field 'm_socket'[0m
+            if(m_evlist[i].data.fd == m_socket) {
+[0;1;32m               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:163:13: [0m[0;1;30mnote: [0mTaking true branch[0m
+            if(m_evlist[i].data.fd == m_socket) {
+[0;1;32m            ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:164:34: [0m[0;1;30mnote: [0mCalling 'MoxitServer::acceptConnection'[0m
+                int new_client = acceptConnection();
+[0;1;32m                                 ^~~~~~~~~~~~~~~~~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:130:8: [0m[0;1;30mnote: [0mAssuming 'new_socket' is >= 0[0m
+    if(new_socket < 0) {
+[0;1;32m       ^~~~~~~~~~~~~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:130:5: [0m[0;1;30mnote: [0mTaking false branch[0m
+    if(new_socket < 0) {
+[0;1;32m    ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:140:33: [0m[0;1;30mnote: [0mMemory is allocated[0m
+    struct epoll_event *event = new struct epoll_event;
+[0;1;32m                                ^~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:147:8: [0m[0;1;30mnote: [0mAssuming the condition is false[0m
+    if(epoll_ctl(m_epfd, EPOLL_CTL_ADD, new_socket, event) < 0) {
+[0;1;32m       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:147:5: [0m[0;1;30mnote: [0mTaking false branch[0m
+    if(epoll_ctl(m_epfd, EPOLL_CTL_ADD, new_socket, event) < 0) {
+[0;1;32m    ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:151:12: [0m[0;1;30mnote: [0mPotential leak of memory pointed to by 'event'[0m
+    return new_socket;
+[0;1;32m           ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:381:1: [0m[0;1;35mwarning: [0m[1mPotential leak of memory pointed to by 'event' [clang-analyzer-cplusplus.NewDeleteLeaks][0m
+}
+[0;1;32m^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:617:9: [0m[0;1;30mnote: [0mCalling 'MoxitServer::addEpollWriteEvent'[0m
+        this->addEpollWriteEvent(req, response);
+[0;1;32m        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:367:33: [0m[0;1;30mnote: [0mMemory is allocated[0m
+    struct epoll_event *event = new struct epoll_event;
+[0;1;32m                                ^~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:378:8: [0m[0;1;30mnote: [0mAssuming the condition is false[0m
+    if(epoll_ctl(m_epfd, EPOLL_CTL_MOD, socket_fd, event) < 0) {
+[0;1;32m       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:378:5: [0m[0;1;30mnote: [0mTaking false branch[0m
+    if(epoll_ctl(m_epfd, EPOLL_CTL_MOD, socket_fd, event) < 0) {
+[0;1;32m    ^
+[0m[1m/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp:381:1: [0m[0;1;30mnote: [0mPotential leak of memory pointed to by 'event'[0m
+}
+[0;1;32m^
+[0m2 warnings generated.
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/request_header.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/request.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/http_status.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/game/test.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/main.cpp
+clang-tidy-14 --use-color -header-filter=.* -p=. /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/game/game.cpp
