@@ -10,7 +10,6 @@ stack="no"
 
 run_massif() {
     local target_name=$1
-    #local output_dir=$2
     local include_stack=$2
 
     echo "Running massif on $target_name..."
