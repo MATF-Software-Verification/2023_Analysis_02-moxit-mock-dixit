@@ -1,15 +1,15 @@
 #!/bin/bash
 
-if [ $1 == "-k" ]; then
-    	echo "u if*-u"
-    	flag="k"
+if [ $# -gt 0 ] && [ "$1" = "-k" ]; then
+    	echo "if"
+    	flag=k
 fi
 
 run_cg_annotate(){
 for input_file in cachegrind.out.*; do
     pid=$(echo "$input_file" | sed 's/cachegrind.out.//')
     
-    if [ $flag == k ]; then
+    if [ "$flag" = "k" ]; then
     	echo "if for petlja"
     	kcachegrind cachegrind.out.$pid
     fi
@@ -21,8 +21,8 @@ for input_file in cachegrind.out.*; do
 done
 }
 
-cd frontend/src/lib/build
+cd cachegrind_backend
 run_cg_annotate
 
-cd ../../../../backend/build
+cd ../cachegrind_frontend
 run_cg_annotate

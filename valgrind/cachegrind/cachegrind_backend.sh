@@ -3,8 +3,8 @@
 set -xe
 
 backend_src="backend/src"
-
 backend_build_dir="backend/build"
+cachegrind_dir="cachegrind_backend"
 
 run_cachegrind() {
     local target_name=$1
@@ -23,6 +23,14 @@ cd $backend_build_dir
 cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ../src
 make > /dev/null
 
-run_cachegrind moxit-backend
+cd ../..
+
+if [ ! -d "$cachegrind_dir" ]; then
+    mkdir $cachegrind_dir
+fi
+
+cd $cachegrind_dir
+
+run_cachegrind ../$backend_build_dir/moxit-backend
 
 echo "Cachegrind analysis completed."
