@@ -2,12 +2,11 @@
 
 set -xe
 
-frontend_src="frontend/src/lib/Main Window"
-
-frontend_build_dir="build_frontend"
+frontend_build_dir="frontend/src/lib/build"
 
 stack="no"
 
+# Function to run massif on a target
 run_massif() {
     local target_name=$1
     local include_stack=$2
@@ -16,30 +15,17 @@ run_massif() {
     valgrind --tool=massif --stacks=$include_stack "./$target_name"
 }
 
-if [ -d "$frontend_build_dir" ]; then
-    rm -rf $frontend_build_dir
+if [ ! -d "massif_frontend" ]; then
+    mkdir massif_frontend
 fi
 
-mkdir $frontend_build_dir
-cd $frontend_build_dir
-
-cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ../"$frontend_src"
-make > /dev/null
-
-if [ ! -d "../massif_frontend" ]; then
-    mkdir ../massif_frontend
-fi
-
-cd ../massif_frontend
+cd massif_frontend
 
 if [ $# == 1 ]; then
    stack=$1
 fi
 
-run_massif ../build_frontend/Moxit $stack
+# Run massif on the backend
+run_massif ../$frontend_build_dir/Moxit $stack
 
 echo "Massif analysis completed."
-
-cd ..
-
-rm -rf $frontend_build_dir
