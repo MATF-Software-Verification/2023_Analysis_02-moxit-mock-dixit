@@ -71,6 +71,13 @@ Ir                   I1mr               ILmr            Dr                   D1m
 --------------------------------------------------------------------------------
 -- Auto-annotated source: /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp
 --------------------------------------------------------------------------------
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@ WARNING @@ WARNING @@ WARNING @@ WARNING @@ WARNING @@ WARNING @@ WARNING @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@ Source file '/home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/server/moxit_server.cpp' is more recent than input file 'cachegrind.out.7004'.
+@ Annotations may not be correct.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 Ir                  I1mr           ILmr         Dr                  D1mr           DLmr           Dw                  D1mw         DLmw         
 
          .              .            .                   .              .              .                   .            .            .           #include "moxit_server.h"
@@ -712,6 +719,59 @@ Ir                  I1mr           ILmr         Dr                  D1mr        
         50 ( 0.00%)     0            0                  10 ( 0.00%)     0              0                  10 ( 0.00%)   0            0                   this->addEpollWriteEvent(req, resp);
        130 ( 0.00%)    20 ( 0.00%)  12 ( 0.00%)         70 ( 0.00%)     1 ( 0.00%)     0                  10 ( 0.00%)   0            0               });
         28 ( 0.00%)     3 ( 0.00%)   3 ( 0.00%)         11 ( 0.00%)     0              0                   5 ( 0.00%)   0            0           }
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /usr/include/c++/11/bits/basic_string.tcc
+--------------------------------------------------------------------------------
+Ir               I1mr           ILmr         Dr               D1mr        DLmr       Dw               D1mw         DLmw        
+
+-- line 198 ----------------------------------------
+      .              .            .                .           .          .                .            .           .           	  }
+      .              .            .                .           .          .                .            .           .           
+      .              .            .                .           .          .                .            .           .           	_M_set_length(__len);
+      .              .            .                .           .          .                .            .           .                 }
+      .              .            .                .           .          .                .            .           .           
+      .              .            .                .           .          .                .            .           .             template<typename _CharT, typename _Traits, typename _Alloc>
+      .              .            .                .           .          .                .            .           .               template<typename _InIterator>
+      .              .            .                .           .          .                .            .           .                 void
+768,823 ( 0.05%) 1,651 ( 0.03%) 385 ( 0.11%)  69,893 ( 0.01%)  0          0          419,358 ( 0.20%)   0           0                 basic_string<_CharT, _Traits, _Alloc>::
+      .              .            .                .           .          .                .            .           .                 _M_construct(_InIterator __beg, _InIterator __end,
+      .              .            .                .           .          .                .            .           .           		   std::forward_iterator_tag)
+      .              .            .                .           .          .                .            .           .                 {
+      .              .            .                .           .          .                .            .           .           	// NB: Not required, but considered best practice.
+559,144 ( 0.04%) 1,638 ( 0.03%) 406 ( 0.12%)  69,893 ( 0.01%)  0          0           69,893 ( 0.03%) 542 ( 0.10%) 30 ( 0.01%)  	if (__gnu_cxx::__is_null_pointer(__beg) && __beg != __end)
+      .              .            .                .           .          .                .            .           .           	  std::__throw_logic_error(__N("basic_string::"
+      .              .            .                .           .          .                .            .           .           				       "_M_construct null not valid"));
+      .              .            .                .           .          .                .            .           .           
+419,358 ( 0.03%)   830 ( 0.02%) 234 ( 0.07%) 139,786 ( 0.03%)  0          0          139,786 ( 0.07%)   0           0           	size_type __dnew = static_cast<size_type>(std::distance(__beg, __end));
+      .              .            .                .           .          .                .            .           .           
+209,679 ( 0.01%)     0            0           69,893 ( 0.01%)  0          0                0            0           0           	if (__dnew > size_type(_S_local_capacity))
+      .              .            .                .           .          .                .            .           .           	  {
+104,423 ( 0.01%)     0            0           18,986 ( 0.00%)  0          0           18,986 ( 0.01%)   0           0           	    _M_data(_M_create(__dnew, size_type(0)));
+ 47,465 ( 0.00%)    16 ( 0.00%)   0           18,986 ( 0.00%)  0          0            9,493 ( 0.00%)   0           0           	    _M_capacity(__dnew);
+      .              .            .                .           .          .                .            .           .           	  }
+      .              .            .                .           .          .                .            .           .           
+      .              .            .                .           .          .                .            .           .           	// Check for out_of_range and length_error exceptions.
+      .              .            .                .           .          .                .            .           .           	__try
+629,037 ( 0.04%)   894 ( 0.02%) 454 ( 0.13%) 209,679 ( 0.04%)  0          0          139,786 ( 0.07%)   0           0           	  { this->_S_copy_chars(_M_data(), __beg, __end); }
+      .              .            .                .           .          .                .            .           .           	__catch(...)
+      .              .            .                .           .          .                .            .           .           	  {
+      .              .            .                .           .          .                .            .           .           	    _M_dispose();
+      .              .            .                .           .          .                .            .           .           	    __throw_exception_again;
+      .              .            .                .           .          .                .            .           .           	  }
+      .              .            .                .           .          .                .            .           .           
+349,465 ( 0.02%) 3,218 ( 0.06%) 647 ( 0.19%) 139,786 ( 0.03%) 13 ( 0.00%) 0           69,893 ( 0.03%)   0           0           	_M_set_length(__dnew);
+489,251 ( 0.03%)   824 ( 0.02%) 661 ( 0.19%) 349,465 ( 0.07%) 24 ( 0.00%) 4 ( 0.00%)       0            0           0                 }
+      .              .            .                .           .          .                .            .           .           
+      .              .            .                .           .          .                .            .           .             template<typename _CharT, typename _Traits, typename _Alloc>
+      .              .            .                .           .          .                .            .           .               void
+      .              .            .                .           .          .                .            .           .               basic_string<_CharT, _Traits, _Alloc>::
+      .              .            .                .           .          .                .            .           .               _M_construct(size_type __n, _CharT __c)
+      .              .            .                .           .          .                .            .           .               {
+      .              .            .                .           .          .                .            .           .                 if (__n > size_type(_S_local_capacity))
+      .              .            .                .           .          .                .            .           .           	{
+-- line 241 ----------------------------------------
+
 --------------------------------------------------------------------------------
 -- Auto-annotated source: /home/andrijanabos/Desktop/02-moxit-mock-dixit/backend/src/lib/game/game.cpp
 --------------------------------------------------------------------------------
@@ -1148,58 +1208,6 @@ Ir               I1mr           ILmr           Dr               D1mr           D
       5 ( 0.00%)     1 ( 0.00%)     0                0              0              0                3 ( 0.00%) 0          0           void Game::setGameId(int newId){
       3 ( 0.00%)     0              0                2 ( 0.00%)     0              0                1 ( 0.00%) 0          0               m_gameID = newId;
      24 ( 0.00%)     3 ( 0.00%)     3 ( 0.00%)       8 ( 0.00%)     0              0                5 ( 0.00%) 0          0           }
-
---------------------------------------------------------------------------------
--- Auto-annotated source: /usr/include/c++/11/bits/basic_string.tcc
---------------------------------------------------------------------------------
-Ir               I1mr           ILmr         Dr               D1mr        DLmr       Dw               D1mw         DLmw        
-
--- line 198 ----------------------------------------
-      .              .            .                .           .          .                .            .           .           	  }
-      .              .            .                .           .          .                .            .           .           
-      .              .            .                .           .          .                .            .           .           	_M_set_length(__len);
-      .              .            .                .           .          .                .            .           .                 }
-      .              .            .                .           .          .                .            .           .           
-      .              .            .                .           .          .                .            .           .             template<typename _CharT, typename _Traits, typename _Alloc>
-      .              .            .                .           .          .                .            .           .               template<typename _InIterator>
-      .              .            .                .           .          .                .            .           .                 void
-768,823 ( 0.05%) 1,651 ( 0.03%) 385 ( 0.11%)  69,893 ( 0.01%)  0          0          419,358 ( 0.20%)   0           0                 basic_string<_CharT, _Traits, _Alloc>::
-      .              .            .                .           .          .                .            .           .                 _M_construct(_InIterator __beg, _InIterator __end,
-      .              .            .                .           .          .                .            .           .           		   std::forward_iterator_tag)
-      .              .            .                .           .          .                .            .           .                 {
-      .              .            .                .           .          .                .            .           .           	// NB: Not required, but considered best practice.
-559,144 ( 0.04%) 1,638 ( 0.03%) 406 ( 0.12%)  69,893 ( 0.01%)  0          0           69,893 ( 0.03%) 542 ( 0.10%) 30 ( 0.01%)  	if (__gnu_cxx::__is_null_pointer(__beg) && __beg != __end)
-      .              .            .                .           .          .                .            .           .           	  std::__throw_logic_error(__N("basic_string::"
-      .              .            .                .           .          .                .            .           .           				       "_M_construct null not valid"));
-      .              .            .                .           .          .                .            .           .           
-419,358 ( 0.03%)   830 ( 0.02%) 234 ( 0.07%) 139,786 ( 0.03%)  0          0          139,786 ( 0.07%)   0           0           	size_type __dnew = static_cast<size_type>(std::distance(__beg, __end));
-      .              .            .                .           .          .                .            .           .           
-209,679 ( 0.01%)     0            0           69,893 ( 0.01%)  0          0                0            0           0           	if (__dnew > size_type(_S_local_capacity))
-      .              .            .                .           .          .                .            .           .           	  {
-104,423 ( 0.01%)     0            0           18,986 ( 0.00%)  0          0           18,986 ( 0.01%)   0           0           	    _M_data(_M_create(__dnew, size_type(0)));
- 47,465 ( 0.00%)    16 ( 0.00%)   0           18,986 ( 0.00%)  0          0            9,493 ( 0.00%)   0           0           	    _M_capacity(__dnew);
-      .              .            .                .           .          .                .            .           .           	  }
-      .              .            .                .           .          .                .            .           .           
-      .              .            .                .           .          .                .            .           .           	// Check for out_of_range and length_error exceptions.
-      .              .            .                .           .          .                .            .           .           	__try
-629,037 ( 0.04%)   894 ( 0.02%) 454 ( 0.13%) 209,679 ( 0.04%)  0          0          139,786 ( 0.07%)   0           0           	  { this->_S_copy_chars(_M_data(), __beg, __end); }
-      .              .            .                .           .          .                .            .           .           	__catch(...)
-      .              .            .                .           .          .                .            .           .           	  {
-      .              .            .                .           .          .                .            .           .           	    _M_dispose();
-      .              .            .                .           .          .                .            .           .           	    __throw_exception_again;
-      .              .            .                .           .          .                .            .           .           	  }
-      .              .            .                .           .          .                .            .           .           
-349,465 ( 0.02%) 3,218 ( 0.06%) 647 ( 0.19%) 139,786 ( 0.03%) 13 ( 0.00%) 0           69,893 ( 0.03%)   0           0           	_M_set_length(__dnew);
-489,251 ( 0.03%)   824 ( 0.02%) 661 ( 0.19%) 349,465 ( 0.07%) 24 ( 0.00%) 4 ( 0.00%)       0            0           0                 }
-      .              .            .                .           .          .                .            .           .           
-      .              .            .                .           .          .                .            .           .             template<typename _CharT, typename _Traits, typename _Alloc>
-      .              .            .                .           .          .                .            .           .               void
-      .              .            .                .           .          .                .            .           .               basic_string<_CharT, _Traits, _Alloc>::
-      .              .            .                .           .          .                .            .           .               _M_construct(size_type __n, _CharT __c)
-      .              .            .                .           .          .                .            .           .               {
-      .              .            .                .           .          .                .            .           .                 if (__n > size_type(_S_local_capacity))
-      .              .            .                .           .          .                .            .           .           	{
--- line 241 ----------------------------------------
 
 --------------------------------------------------------------------------------
 The following files chosen for auto-annotation could not be found:
