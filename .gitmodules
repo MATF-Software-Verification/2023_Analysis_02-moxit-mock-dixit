@@ -1,3 +1,6 @@
 [submodule "02-moxit-mock-dixit"]
 	path = 02-moxit-mock-dixit
 	url = https://gitlab.com/matf-bg-ac-rs/course-rs/projects-2022-2023/02-moxit-mock-dixit
+[submodule "perf/FlameGraph"]
+	path = perf/FlameGraph
+	url = https://github.com/brendangregg/FlameGraph
