@@ -35,7 +35,7 @@ make > /dev/null
 
 cd .. 
 
-run-clang-tidy -p build -header-filter=".*" "Main Window/*.cpp" "Main Window/*.h" "Chat/*.cpp" "Chat/*.h" "network_service/*.cpp" "network_service/*.hpp" 2>&1 | tee "../../../$output_file_frontend"
+run-clang-tidy -p build -header-filter=".*" "Main Window/*.cpp" "Main Window/*.h" "Main Window/fmt/*.h" "Main Window/fmt/*.cpp" "Chat/*.cpp" "Chat/*.h" "network_service/*.cpp" "network_service/*.hpp" 2>&1 | tee "../../../$output_file_frontend"
 
 cd ../../..
 
